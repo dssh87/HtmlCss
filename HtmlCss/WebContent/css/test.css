@@ -1,0 +1,45 @@
+@charset "EUC-KR";
+
+  .wrap{
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+  }
+  .header{
+    width: 100%;
+    height: 20%;
+    /* border-bottom: solid; */
+    background-color: #ff8686;
+
+  }
+  .container{
+	box-sizing: border-box;
+  }
+  .navigation{
+     width: 30%;
+     height: 60%;
+     /* border-bottom: solid; */
+     background-color: #ab91d7;
+     float: left;
+     
+     /* 글자가 칸을 넘어갈때 ... 으로 표시 */
+     white-space: nowrap; 
+     overflow: hidden;
+     text-overflow: ellipsis;
+  }
+  .main{
+     width: 100%;
+     height: 60%;
+     /* border-bottom: solid; */
+     background-color: #42424f;
+     
+  }
+  .footer{
+     width: 100%;
+     height: 20%;
+     /* border-bottom: solid; */
+     background-color: #82cec6;
+
+  }
