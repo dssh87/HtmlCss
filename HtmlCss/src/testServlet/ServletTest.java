@@ -11,8 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/testServlet/ServletTest")
 public class ServletTest extends HttpServlet{
-	public ServletTest() {
-		
+	public ServletTest() {		
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
