@@ -10,51 +10,54 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Lotto {
-	static int oneArray[] = new int[45];
-	static int twoArray[] = new int[45];
-	static int threeArray[] = new int[45];
-	static int fourArray[] = new int[45];
-	static int fiveArray[] = new int[45];
-	static int sixArray[] = new int[45];
-	static int sevenArray[] = new int[45];
-	static int eightArray[] = new int[45];
-	static int nineArray[] = new int[45];
-	static int tenArray[] = new int[45];
-	static int elevenArray[] = new int[45];
-	static int twelveArray[] = new int[45];
-	static int thirteenArray[] = new int[45];
-	static int fourteenArray[] = new int[45];
-	static int fifteenArray[] = new int[45];
-	static int sixteenArray[] = new int[45];
-	static int seventeenArray[] = new int[45];
-	static int eighteenArray[] = new int[45];
-	static int nineteenArray[] = new int[45];
-	static int twentyArray[] = new int[45];
-	static int twentyoneArray[] = new int[45];
-	static int twentytwoArray[] = new int[45];
-	static int twentythreeArray[] = new int[45];
-	static int twentyfourArray[] = new int[45];
-	static int twentyfiveArray[] = new int[45];
-	static int twentysixArray[] = new int[45];
-	static int twentysevenArray[] = new int[45];
-	static int twentyeightArray[] = new int[45];
-	static int twentynineArray[] = new int[45];
-	static int thirtyArray[] = new int[45];
-	static int thirtyoneArray[] = new int[45];
-	static int thirtytwoArray[] = new int[45];
-	static int thirtythreeArray[] = new int[45];
-	static int thirtyfourArray[] = new int[45];
-	static int thirtyfiveArray[] = new int[45];
-	static int thirtysixArray[] = new int[45];
-	static int thirtysevenArray[] = new int[45];
-	static int thirtyeightArray[] = new int[45];
-	static int thirtynineArray[] = new int[45];
-	static int fortyArray[] = new int[45];
-	static int fortyoneArray[] = new int[45];
-	static int fortytwoArray[] = new int[45];
-	static int fortythreeArray[] = new int[45];
-	static int fortyfourArray[] = new int[45];
-	static int fortyfiveArray[] = new int[45];
+
+	static List<int[]> getArray = null;
+	
+	static int Array1[] = new int[45];
+	static int Array2[] = new int[45];
+	static int Array3[] = new int[45];
+	static int Array4[] = new int[45];
+	static int Array5[] = new int[45];
+	static int Array6[] = new int[45];
+	static int Array7[] = new int[45];
+	static int Array8[] = new int[45];
+	static int Array9[] = new int[45];
+	static int Array10[] = new int[45];
+	static int Array11[] = new int[45];
+	static int Array12[] = new int[45];
+	static int Array13[] = new int[45];
+	static int Array14[] = new int[45];
+	static int Array15[] = new int[45];
+	static int Array16[] = new int[45];
+	static int Array17[] = new int[45];
+	static int Array18[] = new int[45];
+	static int Array19[] = new int[45];
+	static int Array20[] = new int[45];
+	static int Array21[] = new int[45];
+	static int Array22[] = new int[45];
+	static int Array23[] = new int[45];
+	static int Array24[] = new int[45];
+	static int Array25[] = new int[45];
+	static int Array26[] = new int[45];
+	static int Array27[] = new int[45];
+	static int Array28[] = new int[45];
+	static int Array29[] = new int[45];
+	static int Array30[] = new int[45];
+	static int Array31[] = new int[45];
+	static int Array32[] = new int[45];
+	static int Array33[] = new int[45];
+	static int Array34[] = new int[45];
+	static int Array35[] = new int[45];
+	static int Array36[] = new int[45];
+	static int Array37[] = new int[45];
+	static int Array38[] = new int[45];
+	static int Array39[] = new int[45];
+	static int Array40[] = new int[45];
+	static int Array41[] = new int[45];
+	static int Array42[] = new int[45];
+	static int Array43[] = new int[45];
+	static int Array44[] = new int[45];
+	static int Array45[] = new int[45];
 
 	public static void main(String[] args) {
 		
@@ -113,20 +116,68 @@ public class Lotto {
 	}
 	// 각 번호별 출현시마다 함께 등장하는 번호를 보관하기 위한 배열 생성
 	public static void compareArray(List<String> win) {
+		getArray = new ArrayList<>();
 		
+		String arrayName = "Array";
 		
-		
-		if(win.contains("1")) {
-			for(int i = 2; i <= 45; i++ ) {
-				if(win.contains(Integer.toString(i))) {
-					oneArray[i-1] += 1 ;
-				}
-			}
+		for(int i = 0; i <= 45; i++) {
+			getArray.add(Array1);
+			getArray.add(Array2);
+			getArray.add(Array3);
+			getArray.add(Array4);
+			getArray.add(Array5);
+			getArray.add(Array6);
+			getArray.add(Array6);
+			getArray.add(Array7);
+			getArray.add(Array8);
+			getArray.add(Array9);
+			getArray.add(Array10);
+			getArray.add(Array11);
+			getArray.add(Array12);
+			getArray.add(Array13);
+			getArray.add(Array14);
+			getArray.add(Array15);
+			getArray.add(Array16);
+			getArray.add(Array17);
+			getArray.add(Array18);
+			getArray.add(Array19);
+			getArray.add(Array20);
+			getArray.add(Array21);
+			getArray.add(Array22);
+			getArray.add(Array23);
+			getArray.add(Array24);
+			getArray.add(Array25);
+			getArray.add(Array26);
+			getArray.add(Array27);
+			getArray.add(Array28);
+			getArray.add(Array29);
+			getArray.add(Array30);
+			getArray.add(Array31);
+			getArray.add(Array32);
+			getArray.add(Array33);
+			getArray.add(Array34);
+			getArray.add(Array35);
+			getArray.add(Array36);
+			getArray.add(Array37);
+			getArray.add(Array38);
+			getArray.add(Array39);
+			getArray.add(Array40);
+			getArray.add(Array41);
+			getArray.add(Array42);
+			getArray.add(Array43);
+			getArray.add(Array44);
+			getArray.add(Array45);			
 		}
-		System.out.println("compareArray : "+Arrays.toString(oneArray));
 		
-		if(win.contains("2")) {
-			return;
+		for(int a = 1; a <= 45; a++) {
+			if(win.contains(Integer.toString(a))) {
+				for(int i = 1; i <= 45; i++ ) {
+					if(win.contains(Integer.toString(i))) {
+						getArray.get(a-1)[i-1] += 1;
+					}
+				}
+			}		
+			System.out.println("Array"+a+" : "+Arrays.toString(getArray.get(a-1)));
 		}
 		
 	}
