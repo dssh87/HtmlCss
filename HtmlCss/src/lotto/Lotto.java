@@ -10,6 +10,51 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Lotto {
+	static int oneArray[] = new int[45];
+	static int twoArray[] = new int[45];
+	static int threeArray[] = new int[45];
+	static int fourArray[] = new int[45];
+	static int fiveArray[] = new int[45];
+	static int sixArray[] = new int[45];
+	static int sevenArray[] = new int[45];
+	static int eightArray[] = new int[45];
+	static int nineArray[] = new int[45];
+	static int tenArray[] = new int[45];
+	static int elevenArray[] = new int[45];
+	static int twelveArray[] = new int[45];
+	static int thirteenArray[] = new int[45];
+	static int fourteenArray[] = new int[45];
+	static int fifteenArray[] = new int[45];
+	static int sixteenArray[] = new int[45];
+	static int seventeenArray[] = new int[45];
+	static int eighteenArray[] = new int[45];
+	static int nineteenArray[] = new int[45];
+	static int twentyArray[] = new int[45];
+	static int twentyoneArray[] = new int[45];
+	static int twentytwoArray[] = new int[45];
+	static int twentythreeArray[] = new int[45];
+	static int twentyfourArray[] = new int[45];
+	static int twentyfiveArray[] = new int[45];
+	static int twentysixArray[] = new int[45];
+	static int twentysevenArray[] = new int[45];
+	static int twentyeightArray[] = new int[45];
+	static int twentynineArray[] = new int[45];
+	static int thirtyArray[] = new int[45];
+	static int thirtyoneArray[] = new int[45];
+	static int thirtytwoArray[] = new int[45];
+	static int thirtythreeArray[] = new int[45];
+	static int thirtyfourArray[] = new int[45];
+	static int thirtyfiveArray[] = new int[45];
+	static int thirtysixArray[] = new int[45];
+	static int thirtysevenArray[] = new int[45];
+	static int thirtyeightArray[] = new int[45];
+	static int thirtynineArray[] = new int[45];
+	static int fortyArray[] = new int[45];
+	static int fortyoneArray[] = new int[45];
+	static int fortytwoArray[] = new int[45];
+	static int fortythreeArray[] = new int[45];
+	static int fortyfourArray[] = new int[45];
+	static int fortyfiveArray[] = new int[45];
 
 	public static void main(String[] args) {
 		
@@ -36,11 +81,11 @@ public class Lotto {
 		String tempUrl = "";
 		int roundNum = 0;
 		try {
-			roundNum = Integer.parseInt(getRoundNum(lottoUrl));
-			for(int i = 1; i <= 10; i++) {
+			for(int i = 1; i <= 100; i++) {
 				tempUrl = "https://dhlottery.co.kr/gameResult.do?method=byWin&drwNo=";
 				lottoUrl = tempUrl + i;
 				System.out.println("lottoUrl : "+lottoUrl);
+				roundNum = Integer.parseInt(getRoundNum(lottoUrl));
 				hashMap = getNum(lottoUrl);
 				
 				round.add(Integer.toString(i));
@@ -53,6 +98,8 @@ public class Lotto {
 				System.out.println("bonus : "+bonus);
 				System.out.println("roundNum : "+roundNum);
 				
+				compareArray(win);
+				
 				listMap.put("winList", winList);
 				listMap.put("bonusList", bonusList);
 			}
@@ -64,6 +111,26 @@ public class Lotto {
 		}
 		
 	}
+	// 각 번호별 출현시마다 함께 등장하는 번호를 보관하기 위한 배열 생성
+	public static void compareArray(List<String> win) {
+		
+		
+		
+		if(win.contains("1")) {
+			for(int i = 2; i <= 45; i++ ) {
+				if(win.contains(Integer.toString(i))) {
+					oneArray[i-1] += 1 ;
+				}
+			}
+		}
+		System.out.println("compareArray : "+Arrays.toString(oneArray));
+		
+		if(win.contains("2")) {
+			return;
+		}
+		
+	}
+	
 	// 당첨번호 수집
 	public static HashMap<String, List<String>> getNum(String lottoUrl)throws IOException  {
 		String sourceLine = "";
@@ -122,9 +189,9 @@ public class Lotto {
 				}
 			}
 		}		
-		//System.out.println("회차 : "+roundNum);
+		System.out.println("회차 : "+roundNum);
 	
 	return roundNum;
-}
+	}
 
 }
